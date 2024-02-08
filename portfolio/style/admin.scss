@@ -1,0 +1,77 @@
+@use "../sass/globals";
+@use "../sass/system";
+@use "../sass/variables" as *;
+
+
+// Header
+
+header {
+    padding-top: $padding-20;
+    padding-bottom: $padding-20;
+    color: $white-fff;
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .name {
+            h1 {
+                color: $white-fff;
+                &::before, &::after {
+                    font-family: 'Font Awesome 6 Free';
+                    font-weight: 700;
+                    color: $green-50c;
+                }
+                &::before { content: "\f104"; }
+                &::after { content: "\f105"; }
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 500px;
+
+            li {
+                a {
+                    color: $white-fff;
+                    &::before {
+                        content: "\f120";
+                        font-family: 'Font Awesome 6 Free';
+                        font-weight: 700;
+                        font-size: 13px;
+                        margin-right: $margin-10;
+                        color: $green-50c;
+                    }
+                }
+            }            
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        .banner {
+            ul {
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        .banner {
+            flex-direction: column;
+            row-gap: 30px;
+
+            ul {
+                width: 100%;
+            }
+        }
+    }
+}
+
+

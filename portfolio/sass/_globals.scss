@@ -1,0 +1,125 @@
+@use "../sass/variables" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: $black-17;
+  // font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: $white-fff;
+  border-radius: 7px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+nav,
+menu {
+  list-style: none;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  background-color: $white-fff;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.sec-heading {
+  color: $white-fff;
+  text-align: center;
+  margin-bottom: $margin-100;
+  font-size: 40px;
+}
+
+span.dot {
+  color: $green-50c;
+}
+
+// KeyFrames
+
+@keyframes up-down {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes pushUp {
+  from {
+    transform: translateY(150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(150px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-150px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+// ########## Components ##########
+
+// ##### Project Button
+
+.open-project {
+  font-size: 15px;
+  a {
+    color: $white-fff;
+    transition: 0.3s;
+
+    i {
+      color: $green-50c;
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: $green-50c;
+    }
+  }
+}

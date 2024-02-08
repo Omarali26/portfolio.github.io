@@ -1,0 +1,34 @@
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// 576px for portrait phones
+@media (min-width: 576px) {
+    .container {
+        width: 560px;
+    }
+}
+
+// 768px for tablets
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+// 992px for laptops
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+// 1200px for large devices
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
